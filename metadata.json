@@ -1,0 +1,6 @@
+{
+  "name": "Vocal Notification Reader",
+  "description": "An Android notification companion that plays real-time notification alerts using local voice recordings, imported audio, or custom pitch-and-speed shifted TTS announcements.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

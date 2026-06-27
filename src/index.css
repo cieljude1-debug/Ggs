@@ -1,0 +1,277 @@
+@import "tailwindcss";
+
+/* HIGH CONTRAST ACCESSIBILITY THEME */
+.theme-high-contrast {
+  --background-color: #000000;
+  --text-color: #ffffff;
+  --accent-color: #ffff00; /* High contrast yellow */
+  --accent-blue: #00ffff;  /* High contrast cyan */
+  --accent-red: #ff0000;   /* High contrast red */
+  --accent-green: #00ff00; /* High contrast green */
+  
+  background-color: var(--background-color) !important;
+  color: var(--text-color) !important;
+}
+
+/* Base override for containers & cards */
+.theme-high-contrast,
+.theme-high-contrast div,
+.theme-high-contrast header,
+.theme-high-contrast main,
+.theme-high-contrast footer,
+.theme-high-contrast select,
+.theme-high-contrast input,
+.theme-high-contrast textarea,
+.theme-high-contrast p,
+.theme-high-contrast span,
+.theme-high-contrast label,
+.theme-high-contrast h1,
+.theme-high-contrast h2,
+.theme-high-contrast h3,
+.theme-high-contrast h4,
+.theme-high-contrast h5,
+.theme-high-contrast h6 {
+  background-image: none !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+}
+
+/* Enforce borders on panels & modules */
+.theme-high-contrast #navigation-header,
+.theme-high-contrast #config-panel,
+.theme-high-contrast #voice-recorder-module,
+.theme-high-contrast #audio-import-module,
+.theme-high-contrast #main-content-grid > div > div,
+.theme-high-contrast .border-white\/10,
+.theme-high-contrast .border-white\/15,
+.theme-high-contrast .border-white\/5,
+.theme-high-contrast .border-white\/20,
+.theme-high-contrast .border-white\/15,
+.theme-high-contrast .border-gray-100 {
+  border: 2px solid #ffffff !important;
+  background-color: #000000 !important;
+  background-image: none !important;
+  backdrop-filter: none !important;
+  border-radius: 8px !important;
+}
+
+/* Text elements */
+.theme-high-contrast .text-slate-400,
+.theme-high-contrast .text-slate-300,
+.theme-high-contrast .text-slate-200,
+.theme-high-contrast .text-slate-500,
+.theme-high-contrast .text-gray-400,
+.theme-high-contrast .text-gray-500,
+.theme-high-contrast .text-emerald-700,
+.theme-high-contrast .text-emerald-300 {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+}
+
+.theme-high-contrast .text-purple-400,
+.theme-high-contrast .text-purple-300,
+.theme-high-contrast .text-indigo-400,
+.theme-high-contrast .text-indigo-300,
+.theme-high-contrast .text-emerald-400,
+.theme-high-contrast .text-teal-400 {
+  color: var(--accent-color) !important;
+  font-weight: 700 !important;
+}
+
+.theme-high-contrast .text-red-400,
+.theme-high-contrast .text-rose-400,
+.theme-high-contrast .text-red-300 {
+  color: var(--accent-red) !important;
+  font-weight: 900 !important;
+}
+
+/* Interactive inputs, selects & buttons */
+.theme-high-contrast button,
+.theme-high-contrast select,
+.theme-high-contrast input[type="text"],
+.theme-high-contrast textarea {
+  border: 2px solid #ffffff !important;
+  border-radius: 6px !important;
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  font-weight: bold !important;
+  outline: none !important;
+}
+
+/* Option element within select */
+.theme-high-contrast select option {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+/* Tabs inside config panel */
+.theme-high-contrast #tab-apps,
+.theme-high-contrast #tab-tts,
+.theme-high-contrast #tab-library {
+  border: 2px solid #ffffff !important;
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  margin: 2px;
+}
+
+.theme-high-contrast #tab-apps.bg-white\/10,
+.theme-high-contrast #tab-tts.bg-white\/10,
+.theme-high-contrast #tab-library.bg-white\/10 {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+
+.theme-high-contrast #tab-apps.bg-white\/10 svg,
+.theme-high-contrast #tab-tts.bg-white\/10 svg,
+.theme-high-contrast #tab-library.bg-white\/10 svg {
+  color: #000000 !important;
+}
+
+/* List selectors (e.g. app-selector-*) */
+.theme-high-contrast [id^="app-selector-"] {
+  border: 2px solid #ffffff !important;
+  background-color: #000000 !important;
+}
+
+.theme-high-contrast [id^="app-selector-"].bg-purple-500\/10 {
+  border-color: var(--accent-color) !important;
+  background-color: #111111 !important;
+}
+
+.theme-high-contrast [id^="app-selector-"].bg-purple-500\/10 * {
+  color: var(--accent-color) !important;
+}
+
+/* Interactive elements state changes */
+.theme-high-contrast button:focus,
+.theme-high-contrast select:focus,
+.theme-high-contrast input:focus,
+.theme-high-contrast textarea:focus {
+  border-color: var(--accent-color) !important;
+  outline: 2px solid var(--accent-color) !important;
+}
+
+.theme-high-contrast button:hover {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  border-color: #ffffff !important;
+}
+
+.theme-high-contrast button:hover * {
+  color: #000000 !important;
+}
+
+/* Custom theme toggle button always stays distinct and accessible */
+.theme-high-contrast #theme-toggle-btn {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  border: 2px solid #ffffff !important;
+}
+
+.theme-high-contrast #theme-toggle-btn:hover {
+  background-color: var(--accent-color) !important;
+  color: #000000 !important;
+  border-color: var(--accent-color) !important;
+}
+
+/* Specific sub-sections & background panels */
+.theme-high-contrast .bg-white\/5,
+.theme-high-contrast .bg-slate-900\/60,
+.theme-high-contrast .bg-[#12121e]\/90,
+.theme-high-contrast .bg-white\/10,
+.theme-high-contrast .bg-purple-500\/10,
+.theme-high-contrast .bg-emerald-500\/20,
+.theme-high-contrast .bg-red-500\/10,
+.theme-high-contrast .bg-rose-500\/10,
+.theme-high-contrast .bg-purple-500\/20 {
+  background-color: #000000 !important;
+  background-image: none !important;
+  border: 2px solid #ffffff !important;
+}
+
+/* Range input high-contrast style */
+.theme-high-contrast input[type="range"] {
+  accent-color: var(--accent-color) !important;
+  background-color: #ffffff !important;
+  border: 1px solid #ffffff !important;
+  height: 8px !important;
+}
+
+/* Toggle Switch (ConfigPanel, etc.) */
+.theme-high-contrast #app-toggle-btn {
+  border: 2px solid #ffffff !important;
+  background-color: #000000 !important;
+}
+
+.theme-high-contrast #app-toggle-btn.bg-purple-500 {
+  background-color: var(--accent-green) !important;
+}
+
+.theme-high-contrast #app-toggle-btn span {
+  background-color: #ffffff !important;
+  border: 1px solid #000000 !important;
+}
+
+/* Drag & Drop Audio Upload Box */
+.theme-high-contrast #drag-drop-zone {
+  border: 3px dashed #ffffff !important;
+  background-color: #000000 !important;
+}
+
+.theme-high-contrast #drag-drop-zone.border-purple-500 {
+  border-color: var(--accent-color) !important;
+  background-color: #111111 !important;
+}
+
+/* Live Waveform & Spectrum heights */
+.theme-high-contrast .bg-emerald-400,
+.theme-high-contrast .bg-purple-400 {
+  background-color: var(--accent-color) !important;
+  box-shadow: none !important;
+}
+
+/* Sliding notification banners & Lock screen visualizers */
+.theme-high-contrast .absolute.top-2 {
+  background-color: #000000 !important;
+  border: 2px solid #ffffff !important;
+}
+
+/* High contrast alerts and states */
+.theme-high-contrast .bg-emerald-500\/10 {
+  background-color: #000000 !important;
+  border-color: var(--accent-green) !important;
+}
+
+.theme-high-contrast .bg-red-500\/10 {
+  background-color: #000000 !important;
+  border-color: var(--accent-red) !important;
+}
+
+/* Specific icon adjustments */
+.theme-high-contrast svg {
+  filter: brightness(1) contrast(2) !important;
+}
+
+.theme-high-contrast .bg-gradient-to-tr {
+  background-color: #000000 !important;
+  background-image: none !important;
+  border: 2px solid #ffffff !important;
+}
+
+/* Inline badges and chips */
+.theme-high-contrast .bg-purple-500\/20,
+.theme-high-contrast .bg-emerald-500\/20,
+.theme-high-contrast .bg-indigo-500\/20 {
+  background-color: #000000 !important;
+  border: 2px solid #ffffff !important;
+  color: #ffffff !important;
+}
+
+/* Hide scrollbars for chrome/safari and others */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
